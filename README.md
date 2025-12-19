@@ -12,6 +12,13 @@ Production-ready starter for a modern Turkish fast-food ordering platform.
 ```
 frontend/   Next.js storefront
 backend/    Spring Boot API
+docs/       Static demo for GitHub Pages
+```
+
+## GitHub Pages demo
+This repository includes a static demo in the `docs/` folder. Enable GitHub Pages
+and point it to the `/docs` folder to preview the storefront.
+
 ```
 
 ## Frontend

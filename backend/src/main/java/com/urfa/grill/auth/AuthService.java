@@ -35,12 +35,21 @@ public class AuthService {
 
     @Transactional
     public AuthResponse register(RegisterRequest request) {
+        if (userRepository.findByEmail(request.getEmail()).isPresent()) {
+            throw new IllegalStateException("Email already registered");
+        }
+
+        if (request.getRole() == Role.ADMIN) {
+            throw new IllegalStateException("Admin registration is not allowed");
+        }
+
         User user = new User();
         user.setEmail(request.getEmail());
         user.setPasswordHash(passwordEncoder.encode(request.getPassword()));
         user.setRole(request.getRole());
 
         if (request.getRole() == Role.USER) {
+            requireNonBlank(request.getFullName(), "Full name is required");
             CustomerProfile profile = new CustomerProfile();
             profile.setUser(user);
             profile.setFullName(request.getFullName());
@@ -50,6 +59,7 @@ public class AuthService {
         }
 
         if (request.getRole() == Role.COMPANY) {
+            requireNonBlank(request.getCompanyName(), "Company name is required");
             CompanyProfile profile = new CompanyProfile();
             profile.setUser(user);
             profile.setCompanyName(request.getCompanyName());
@@ -83,5 +93,11 @@ public class AuthService {
 
     public String generateRefreshToken(String subject) {
         return jwtService.generateRefreshToken(subject);
+    }
+
+    private void requireNonBlank(String value, String message) {
+        if (value == null || value.trim().isEmpty()) {
+            throw new IllegalStateException(message);
+        }
     }
 }

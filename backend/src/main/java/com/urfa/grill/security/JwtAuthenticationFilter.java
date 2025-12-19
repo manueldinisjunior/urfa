@@ -34,7 +34,13 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         }
 
         String token = header.substring(7);
-        Claims claims = jwtService.parseToken(token);
+        Claims claims;
+        try {
+            claims = jwtService.parseToken(token);
+        } catch (io.jsonwebtoken.JwtException ex) {
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return;
+        }
         String subject = claims.getSubject();
 
         if (subject != null && SecurityContextHolder.getContext().getAuthentication() == null) {

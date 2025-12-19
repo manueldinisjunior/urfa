@@ -19,4 +19,4 @@ security:
     issuer: urfa-grill
     access-token-expiration-minutes: 15
     refresh-token-expiration-days: 14
-    secret: "change-me-to-a-64-char-secret-in-prod"
+    secret: "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
