@@ -1,0 +1,9 @@
+# Node
+node_modules/
+.next/
+
+# Java
+backend/target/
+
+# OS
+.DS_Store
