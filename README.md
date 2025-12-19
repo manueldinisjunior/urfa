@@ -19,6 +19,8 @@ docs/       Static demo for GitHub Pages
 This repository includes a static demo in the `docs/` folder. Enable GitHub Pages
 and point it to the `/docs` folder to preview the storefront.
 
+```
+
 ## Frontend
 ```bash
 cd frontend
