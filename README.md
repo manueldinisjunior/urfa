@@ -21,6 +21,14 @@ styles.css  Static demo styles (root)
 To ensure the store page renders (not the README), enable GitHub Pages and point it to the **root**
 folder so it serves `index.html`. Alternatively, you can set Pages to `/docs` and use the
 `docs/index.html` build.
+docs/       Static demo for GitHub Pages
+```
+
+## GitHub Pages demo
+This repository includes a static demo in the `docs/` folder. Enable GitHub Pages
+and point it to the `/docs` folder to preview the storefront.
+
+```
 
 ## Frontend
 ```bash
