@@ -111,6 +111,10 @@ button {
   margin-bottom: 18px;
 }
 
+.hero-actions button {
+  white-space: nowrap;
+}
+
 .primary {
   background: linear-gradient(120deg, #f1702a, #ffb45b);
   border: none;
@@ -299,5 +303,35 @@ button {
 
   .hero-copy h1 {
     font-size: 36px;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+
+  .hero-actions button {
+    flex: 1 1 180px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions button {
+    width: 100%;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-card {
+    min-height: auto;
   }
 }
