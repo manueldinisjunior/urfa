@@ -1,5 +1,0 @@
-# Im Repository-Root erstellen
-touch .nojekyll
-git add .nojekyll
-git commit -m "Disable Jekyll for static files"
-git push
