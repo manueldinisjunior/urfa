@@ -106,10 +106,6 @@ a {
   margin-bottom: 18px;
 }
 
-.hero-actions button {
-  white-space: nowrap;
-}
-
 .primary {
   background: linear-gradient(120deg, #f1702a, #ffb45b);
   border: none;

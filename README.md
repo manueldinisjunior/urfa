@@ -12,23 +12,12 @@ Production-ready starter for a modern Turkish fast-food ordering platform.
 ```
 frontend/   Next.js storefront
 backend/    Spring Boot API
-docs/       Static demo for GitHub Pages (if you point Pages to /docs)
-index.html  Static demo for GitHub Pages (root)
-styles.css  Static demo styles (root)
-```
-
-## GitHub Pages demo
-To ensure the store page renders (not the README), enable GitHub Pages and point it to the **root**
-folder so it serves `index.html`. Alternatively, you can set Pages to `/docs` and use the
-`docs/index.html` build.
 docs/       Static demo for GitHub Pages
 ```
 
 ## GitHub Pages demo
-This repository includes a static demo in the `docs/` folder. Enable GitHub Pages
-and point it to the `/docs` folder to preview the storefront.
-
-```
+For a standard GitHub Pages setup, enable Pages and point it to the `/docs` folder so it serves
+`docs/index.html` as the storefront homepage.
 
 ## Frontend
 ```bash
